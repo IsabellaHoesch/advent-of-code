@@ -1,6 +1,4 @@
-# Day 1:
-# Aufgabenstellung:
-# find three numbers in list that add up to 2020. Then multiply this numbers with each other.
+# Day 1: Report Repair
 
 number_list = [1933, 1963,    1924,    1832,    1949,    1826,    1681,    1548,    1881,    1973,    1558,    1979,    1803,    1975,    1867,
     1934,    1986,    1220,    1878,   1985,    2006,   1535,    1522,   1884,    1380,    1922,   1905,    1582,
@@ -18,13 +16,24 @@ number_list = [1933, 1963,    1924,    1832,    1949,    1826,    1681,    1548,
 
 
 
+# Part 1:
+"""
+Find the two entries that sum to 2020; what do you get if you multiply them together?
+"""
+for a in number_list:
+    for b in number_list:
+            if a+b == 2020:
+                print(a*b)
 
 
+# Part 2: finding three numbers summing to 2020
+"""
+Find the three entries that sum to 2020; what do you get if you multiply them together?
+"""
 
 for a in number_list:
     for b in number_list:
         for c in number_list:
-            x = a+b+c
-            if x == 2020:
+            if a+b+c == 2020:
                 print(a*b*c)
 
