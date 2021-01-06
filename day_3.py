@@ -1,4 +1,4 @@
-# Day 3: Part 1
+# Day 3: Toboggan Trajectory
 """
 Starting at the top-left corner of your map and following a slope of right 3 and down 1, how many trees would you encounter?
 
@@ -13,6 +13,14 @@ data = data['og'].apply(lambda x: pd.Series(list(x)))
 num_dfs = data.shape[0] / data.shape[1]
 num_dfs = 7 #todo fix this so the apropriate amount is added (4 for part 1, 7 for part 2)
 
+
+
+
+# Part 1:
+"""
+Starting at the top-left corner of your map and following a slope of right 3 and down 1, how many trees would you encounter?
+"""
+
 for d in range(int(num_dfs)):
     data_new = data.copy()
     data = pd.concat([data, data_new], axis=1)
@@ -26,7 +34,11 @@ for row in range(1,len(data)):
         counter += 1
 print("You´d encounter", counter, "trees on the slope")
 
-# Part 2
+# Part 2:
+"""
+In the above example, these slopes would find 2, 7, 3, 4, and 2 tree(s) respectively; multiplied together, these produce the answer 336.
+What do you get if you multiply together the number of trees encountered on each of the listed slopes?
+"""
 
 ## Right 1, down 1.
 ## Right 3, down 1. (This is the slope you already checked.)
